@@ -1,7 +1,11 @@
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators'
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { User } from 'src/app/user';
-import { UserService } from 'src/app/user.service';
+import { UserService } from '../user.service';
+import { User } from '../user';
+
 
 @Component({
   selector: 'app-user-list',
@@ -9,24 +13,20 @@ import { UserService } from 'src/app/user.service';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
+  users$: Observable<User[]>;
+  selectedId: number;
 
-  selectedUser: User;
-
-  users: User[];
-
-  constructor(private userService: UserService) { }
+  constructor(
+    private service: UserService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.getUsers();
+    this.users$ = this.route.paramMap.pipe(
+     switchMap(params => {
+       this.selectedId = +params.get('id');
+       return this.service.getUsers();
+     })
+   );
   }
-
-  onSelect(user: User): void {
-    this.selectedUser = user;
-  }
-
-  getUsers(): void {
-    this.userService.getUsers()
-        .subscribe(users => this.users = users);
-  }
-
 }

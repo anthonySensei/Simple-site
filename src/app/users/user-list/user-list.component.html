@@ -3,9 +3,13 @@
     <span class="page-title">Contacts</span>
     <hr style="background: white">
     <div class="container">
-      <div class="contact" *ngFor="let user of users"
-           [class.selected]="user === selectedUser" >
-        <p><strong>{{user.name}} {{user.surname}}</strong></p>
+      <div class="contact" *ngFor="let user of users$ | async">
+        <p>
+          <strong>{{user.name}} {{user.surname}}</strong>
+          <span class="selected-span" [class.selected]="user.id === selectedId">
+            | Selected
+          </span>
+        </p>
         <p>Lorem ipsum dolor sit amet, consectetur.</p>
         <a [routerLink]="['/user', user.id]" class="contact-link">View</a>
         <hr style="background: #fff">

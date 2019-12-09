@@ -1,3 +1,17 @@
+.selected-span{
+  display: none;
+}
+span.selected {
+  display: inline;
+  color: #EA750D;
+}
+.container :hover .selected, .container :hover .selected-span{
+  color: red;
+}
+.container :hover .selected-span{
+  display: inline;
+}
+
 .page-title{
   text-align: center;
 }

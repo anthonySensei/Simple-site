@@ -1,37 +1,45 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a routerLink="#" class="navbar-brand">
-    <a class="navbar-brand" routerLink="/"><fa-icon [icon]="faHome" size="lg"></fa-icon></a>
+    <a class="navbar-brand" routerLink="/">
+      <fa-icon [icon]="faHome" size="lg"></fa-icon>
+    </a>
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a routerLink="/welcome-page" routerLinkActive="active" class="nav-link">Home</a>
-      </li>
-      <div *ngIf="login">
         <li class="nav-item">
-          <a routerLink="simple-page" routerLinkActive="active" class="nav-link">Simple page</a>
+          <a routerLink="/welcome-page" routerLinkActive="active" class="nav-link">Home</a>
         </li>
-      </div>
-      <li class="nav-item">
-        <a routerLink="users" routerLinkActive="active" class="nav-link">Contacts</a>
-      </li>
+          <li class="nav-item" *ngIf="authService.isLoggedIn">
+            <a routerLink="simple-page" routerLinkActive="active" class="nav-link">Simple page</a>
+          </li>
+          <li class="nav-item" *ngIf="authService.isLoggedIn">
+            <a routerLink="users" routerLinkActive="active" class="nav-link">Contacts</a>
+          </li>
 
     </ul>
     <div class="my-2 my-lg-0">
       <ul class="navbar-nav mr-auto">
-        <div *ngIf="login else elseblock">
+        <div *ngIf="authService.isLoggedIn else elseblock">
           <li class="nav-item">
-            <a routerLink="/welcome-page" routerLinkActive="active" class="nav-link"><fa-icon [icon]="faDoorClosed" size="lg"></fa-icon></a>
+            <a (click)="logout()" routerLink="/welcome-page" class="nav-link">
+              <span class="h6" id="log-out">Log out</span>
+              <fa-icon [icon]="faDoorClosed" size="lg"></fa-icon>
+            </a>
           </li>
         </div>
         <ng-template #elseblock>
           <li class="nav-item">
-            <a routerLink="/login"  class="nav-link"><span class="h6" id="login">Log in </span><fa-icon [icon]="faDoorOpen" size="lg"></fa-icon></a>
+            <a routerLink="/login"  class="nav-link">
+              <span class="h6" id="log-in">Log in </span>
+              <fa-icon [icon]="faDoorOpen" size="lg"></fa-icon>
+            </a>
           </li>
         </ng-template>
       </ul>
@@ -42,9 +50,15 @@
 
 <footer class="mini-footer">
   <div class="container text-center">
-      <div><a routerLink="mailto: toxa13.00@ukr.net" class="link">Email</a></div>
-      <div><a routerLink="https://www.instagram.com/anthony_sensei_" class="link">Instagram</a></div>
-      <div><a routerLink="https://www.facebook.com/whitedvl" class="link">Facebook</a></div>
+      <div>
+        <a routerLink="mailto: toxa13.00@ukr.net" class="link">Email</a>
+      </div>
+      <div>
+        <a routerLink="https://www.instagram.com/anthony_sensei_" class="link">Instagram</a>
+      </div>
+      <div>
+        <a routerLink="https://www.facebook.com/whitedvl" class="link">Facebook</a>
+      </div>
   </div>
 </footer>
 
@@ -57,13 +71,19 @@
     </div>
     <div class="row">
       <div class="col-sm-4"></div>
-      <div class="col-sm-4"><a href="mailto: toxa13.00@ukr.net" class="link">toxa13.00@ukr.net</a></div>
-      <div class="col-sm-4"><a href="https://www.instagram.com/anthony_sensei_" class="link">Instagram</a></div>
+      <div class="col-sm-4">
+        <a href="mailto: toxa13.00@ukr.net" class="link">toxa13.00@ukr.net</a>
+      </div>
+      <div class="col-sm-4">
+        <a href="https://www.instagram.com/anthony_sensei_" class="link">Instagram</a>
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-4"></div>
       <div class="col-sm-4"></div>
-      <div class="col-sm-4"><a href="https://www.facebook.com/whitedvl" class="link">Facebook</a></div>
+      <div class="col-sm-4">
+        <a href="https://www.facebook.com/whitedvl" class="link">Facebook</a>
+      </div>
     </div>
   </div>
 </footer>

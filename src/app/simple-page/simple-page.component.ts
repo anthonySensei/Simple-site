@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { faStar, faMoon, faSun, faAngleRight,
         faAngleDoubleDown, faAngleDoubleUp
-       } from '@fortawesome/free-solid-svg-icons';
+      } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-simple-page',

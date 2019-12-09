@@ -4,16 +4,28 @@
     <span class="page-title">Welcome to <span style="color:white">Simpe Site</span>.</span>
     <hr style="background: white">
     <div style="color: white; padding: 50px;">
-      <p class="h3">
+      <p class="h3" *ngIf="!authService.isLoggedIn else elseblock">
         You are not authorized to see all features
       </p>
+      <ng-template #elseblock>
+        <p class="h3">
+          I'm glad to see you in my site
+        </p>
+      </ng-template>
     </div>
     <div id="formFooter">
-      <a class="underlineHover" routerLink="/login">
-        Login
-      </a> / <a class="underlineHover" routerLink="/registration">
-        Registration
-      </a>
+      <span *ngIf="!authService.isLoggedIn else elsefooter">
+        <a class="underlineHover" routerLink="/login">
+          Login
+        </a> / <a class="underlineHover" routerLink="/registration">
+          Registration
+        </a>
+      </span>
+      <ng-template #elsefooter>
+        <a class="underlineHover" routerLink="/simple-page">
+          Simple page
+        </a>
+      </ng-template>
     </div>
   </div>
 
