@@ -1,0 +1,29 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div *ngIf="user$ | async as user">
+    <span class="page-title">{{ user.name }} {{user.surname}}</span>
+    <hr style="background: white">
+      <div class="image-container">
+        <img src="{{ user.photo }}" alt="image" class="img-fluid rounded">
+      </div>
+      <div class="personal-information">
+        <p>Country: {{user.country}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Phone number: {{user.phoneNumber}}</p>
+        <p>Date of birth: {{user.dateOfBirth}}</p>
+      </div>
+      <p>
+        <button class="contact-button" (click)="gotoUsers(user)" >Back</button>
+      </p>
+    <div id="formFooter">
+      <a class="underlineHover" href="mailto: toxa13.00@ukr.net">
+        Send email
+      </a> <span style="color:#000"> / </span> <a class="underlineHover" (click)="gotoUsers(user)">
+       Back to contacts
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<br><br>

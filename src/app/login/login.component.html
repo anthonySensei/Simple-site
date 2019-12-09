@@ -1,0 +1,37 @@
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <span class="page-title">Login</span>
+    <hr style="background: white">
+     <form>
+       <div class="input-group form-group">
+         <div class="input-group-prepend">
+	 		  	<span class="input-group-text span-login">
+            <fa-icon [icon]="faUser" size="lg"></fa-icon>
+          </span>
+	 		  </div>
+         <input type="text" id="login" class="fadeIn second"
+                name="login" placeholder="login" required>
+       </div>
+       <div class="input-group form-group">
+         <div class="input-group-prepend">
+           <span class="input-group-text span-password">
+             <fa-icon [icon]="faLock" size="lg"></fa-icon>
+           </span>
+          </div>
+         <input type="password" id="password" class="fadeIn third"
+                name="password" placeholder="password" required>
+       </div>
+       <input type="submit" class="fadeIn fourth" value="Log In">
+     </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/password-recovery">
+        Forgot Password?
+      </a> / <a class="underlineHover" routerLink="/registration">
+        Don't have account?
+      </a>
+    </div>
+  </div>
+
+</div>

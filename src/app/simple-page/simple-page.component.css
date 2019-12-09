@@ -1,0 +1,162 @@
+.simple-page{
+  background-color: #f2f2f2;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+.main-image{
+  width: 100%;
+  max-width: 100%;
+  height: 20%;
+}
+#headerwrap{
+  background: url("https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg") no-repeat center top;
+  padding-top: 20px;
+  background-attachment: relative;
+  background-position: center;
+  min-height: 400px;
+  width: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+#headerwrap h1{
+  margin-top: 50px;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+#headerwrap h4{
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.mt-25{
+  margin-top: 25px;
+}
+
+/* Post */
+
+
+.simple-img{
+  border-radius: 5px;
+  box-shadow: 4px 5px 15px grey;
+
+}
+
+.post-link{
+  display:block;
+  margin-top: 10px;
+  color: #EA750D;
+  font-size: 1.3em;
+}
+
+
+
+/* Interactive card */
+
+
+.card{
+  width: 250px;
+  left: 39%;
+}
+
+.hover-card {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  border: none;
+}
+.hover-card a:hover{
+  color:black;
+}
+
+.hover-card img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: filter 1s;
+  transition: filter 1s;
+}
+
+.hover-card .btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+.hover-card .more-info {
+  display: none;
+  position: absolute;
+  color: #fff;
+  cursor:pointer;
+  width: 100%;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  cursor: pointer;
+  border-top: 2px solid #fff;
+  text-align: center;
+}
+
+.hover-card .more-info:hover{
+  background-color: #fff;
+  color: #696868;
+}
+.card-content{
+  display: none;
+}
+.card-content.show{
+  display: block;
+}
+
+
+@media screen and (max-width: 600px) {
+  .card{
+    left: 20%;
+  }
+  .right-side{
+    display: none;
+  }
+  .col-lg-4{
+    float: left;
+    display: inline-block;
+    width: 33.3%;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .card{
+    left: 31%;
+  }
+  .right-side{
+    display: none;
+  }
+  .col-lg-4{
+    float: left;
+    display: inline-block;
+    width: 33.3%;
+  }
+}

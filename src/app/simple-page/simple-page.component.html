@@ -1,0 +1,264 @@
+<div id="simple-page">
+  <div id="headerwrap">
+    <div class="container">
+             <h1>Angular is awesome!</h1>
+             <h4>Angular helps you make great projects</h4>
+      </div>
+  </div>
+
+  <section class="container mt-25">
+    <div class="container card-container">
+          <div class="card text-center">
+            <div class="hover-card">
+              <img class="card-img-top"
+                   src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+                   alt="Card image" style="width:100%"
+                   (mouseenter)="showCardOptions($event.target)"
+                   (mouseleave)="hideCardOptions($event.target)">
+              <a class="btn btn-outline-light" [routerLink]="['/user', 1]"
+                      (mouseenter)="keepCardOptionsForBtn($event.target)">Contact</a>
+              <span (mouseenter)="keepCardOptionsForSpn($event.target)" class="more-info"
+                    (mouseleave)="hideCardOptionsForSpn($event.target.previousSibling.previousSibling)"
+                    (click)="displayContent($event.target)">
+                <fa-icon [icon]="faAngleDoubleIcon" size="2x"></fa-icon>
+              </span>
+            </div>
+            <div class="card-body card-content">
+              <h4 class="card-title">Lorem ipsum.</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                   Perspiciatis dolor rem.</p>
+            </div>
+          </div>
+    </div>
+    <br>
+    <h2 class="text-center">Lorem ipsum dolor.</h2>
+    <p class="text-justify">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, provident.
+      Quo error consequatur laboriosam eos quod consequuntur tempora sapiente facilis
+      ad iste unde recusandae maiores, exercitationem veniam ab iure ratione debitis
+      ut ullam tempore architecto, esse! Magni voluptates totam officiis ea veniam,
+      nulla odit, minus. Sint hic temporibus quidem quis ex aspernatur tempore sunt!
+      Voluptatum quia quasi vitae placeat harum ex aliquam laborum veritatis nemo
+      doloremque perspiciatis odit modi, ipsam ipsa earum debitis optio possimus
+      porro dolores? Error magni numquam, temporibus illo eligendi rem, quos?
+      Sequi corporis vel perspiciatis dignissimos quaerat. Ex iusto nisi,
+      nulla cupiditate velit voluptatem porro corporis quis cum recusandae
+      veritatis explicabo eum mollitia dolorum quaerat doloribus quas odio
+      laborum consectetur provident incidunt culpa. Odio earum sequi expedita,
+      cumque fuga hic aperiam porro natus totam non excepturi distinctio maxime
+      quibusdam quas suscipit, deserunt placeat possimus veritatis asperiores!
+      Vero excepturi, laboriosam hic distinctio aliquid recusandae sunt atque
+      commodi repellendus architecto ducimus delectus. Ullam suscipit deleniti dicta,
+      quas aut nostrum hic. Eveniet possimus, totam asperiores id ratione harum maxime,
+      eligendi suscipit quasi maiores, dolor perferendis neque eius ipsum magnam!
+      Deserunt natus inventore rerum officia nobis at animi expedita, error,
+      magni id dolore iusto eos. Similique quod, ad sit culpa enim saepe
+      molestias nemo veritatis fuga, maxime, adipisci maiores autem alias
+      cum minima delectus quae eaque! Sapiente, tenetur, neque!
+      Ad magnam saepe accusamus, perspiciatis dicta quasi libero,
+      eum possimus unde aperiam nihil optio, dolor quaerat.
+      Laboriosam dolore, temporibus minima mollitia enim, nihil suscipit dolorem
+      autem officiis corporis doloremque harum odit velit ipsum libero?
+      Impedit architecto laudantium culpa esse eum illo quia quae temporibus
+      accusamus nobis blanditiis, labore debitis, nostrum nisi, dolorum eius!
+      Blanditiis, laboriosam, veritatis. Repudiandae iure veritatis,
+      velit temporibus consequatur at ab, enim fugiat ducimus ratione
+      corporis porro labore culpa quaerat nemo optio obcaecati
+      numquam error maiores eveniet quo!
+    </p>
+    <h2 class="h1 text-center my-5 font-weight-bold">
+       Programing
+    </h2>
+
+
+    <div class="row text-left">
+      <div class="col-lg-6">
+        <img src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg"
+             alt="img" class="img-fluid simple-img">
+        <a routerLink="#" class="light-blue-text post-link">
+            <strong>Lorem</strong>
+        </a>
+          <div class="news-data">
+          <p>
+            <strong>07/12/2019</strong>
+          </p>
+        </div>
+        <h3>
+          <a routerLink="#" class="post-link">
+            List of posts
+          </a>
+        </h3>
+         <p>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           Temporibus odit iusto consectetur, dignissimos quaerat alias neque
+           voluptas autem unde laborum.
+         </p>
+
+         <hr>
+
+         <div class="row">
+           <div class="col-md-3">
+               <img src="https://images.pexels.com/photos/1181269/pexels-photo-1181269.jpeg"
+                    alt="img" class="img-fluid">
+           </div>
+
+           <div class="col-md-9">
+             <p>
+               <strong>
+                 06/12/2019
+               </strong>
+             </p>
+             <a>
+               Lorem ipsum dolor sit amet, consectetur.
+               <a routerLink="#" class="float-right non-dicoration-icon">
+                 <fa-icon [icon]="faAngleRight"></fa-icon>
+               </a>
+             </a>
+           </div>
+         </div>
+
+
+         <hr>
+
+         <div class="row">
+           <div class="col-md-3">
+               <img src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg"
+                    alt="img" class="img-fluid">
+           </div>
+
+           <div class="col-md-9">
+             <p>
+               <strong>
+                 05/12/2019
+               </strong>
+             </p>
+             <a>
+               Lorem ipsum dolor sit amet, consectetur.
+               <a routerLink="#" class="float-right non-dicoration-icon">
+                 <fa-icon [icon]="faAngleRight"></fa-icon>
+               </a>
+             </a>
+           </div>
+         </div>
+
+       <hr>
+
+       <div class="row">
+         <div class="col-md-3">
+             <img src="https://images.pexels.com/photos/89724/pexels-photo-89724.jpeg"
+                  alt="img" class="img-fluid">
+         </div>
+
+         <div class="col-md-9">
+           <p>
+             <strong>
+              04/12/2019
+             </strong>
+           </p>
+           <a>
+             Lorem ipsum dolor sit amet, consectetur.
+             <a routerLink="#" class="float-right non-dicoration-icon">
+               <fa-icon [icon]="faAngleRight"></fa-icon>
+             </a>
+           </a>
+         </div>
+       </div>
+      </div>
+
+
+      <div class="col-lg-6 right-side">
+        <img src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg"
+             alt="img" class="img-fluid simple-img">
+        <a routerLink="#" class="light-blue-text post-link">
+            <strong>Lorem</strong>
+        </a>
+          <div class="news-data">
+          <p>
+            <strong>07/12/2019</strong>
+          </p>
+        </div>
+        <h3>
+          <a routerLink="#" class="post-link">
+            List of posts
+          </a>
+        </h3>
+         <p>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           Temporibus odit iusto consectetur, dignissimos quaerat alias neque
+           voluptas autem unde laborum.
+         </p>
+
+         <hr>
+
+         <div class="row">
+           <div class="col-md-3">
+               <img src="https://images.pexels.com/photos/1181269/pexels-photo-1181269.jpeg"
+                    alt="img" class="img-fluid">
+           </div>
+
+           <div class="col-md-9">
+             <p>
+               <strong>
+                 06/12/2019
+               </strong>
+             </p>
+             <a>
+               Lorem ipsum dolor sit amet, consectetur.
+               <a routerLink="#" class="float-right non-dicoration-icon">
+                 <fa-icon [icon]="faAngleRight"></fa-icon>
+               </a>
+             </a>
+           </div>
+         </div>
+
+
+         <hr>
+
+         <div class="row">
+           <div class="col-md-3">
+               <img src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg"
+                    alt="img" class="img-fluid">
+           </div>
+
+           <div class="col-md-9">
+             <p>
+               <strong>
+                 05/12/2019
+               </strong>
+             </p>
+             <a>
+               Lorem ipsum dolor sit amet, consectetur.
+               <a routerLink="#" class="float-right non-dicoration-icon">
+                 <fa-icon [icon]="faAngleRight"></fa-icon>
+               </a>
+             </a>
+           </div>
+         </div>
+
+       <hr>
+
+       <div class="row">
+         <div class="col-md-3">
+             <img src="https://images.pexels.com/photos/89724/pexels-photo-89724.jpeg"
+                  alt="img" class="img-fluid">
+         </div>
+
+         <div class="col-md-9">
+           <p>
+             <strong>
+              04/12/2019
+             </strong>
+           </p>
+           <a>
+             Lorem ipsum dolor sit amet, consectetur.
+             <a routerLink="#" class="float-right non-dicoration-icon">
+               <fa-icon [icon]="faAngleRight"></fa-icon>
+             </a>
+           </a>
+         </div>
+       </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+</div>

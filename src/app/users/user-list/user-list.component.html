@@ -1,0 +1,23 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <span class="page-title">Contacts</span>
+    <hr style="background: white">
+    <div class="container">
+      <div class="contact" *ngFor="let user of users"
+           [class.selected]="user === selectedUser" >
+        <p><strong>{{user.name}} {{user.surname}}</strong></p>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        <a [routerLink]="['/user', user.id]" class="contact-link">View</a>
+        <hr style="background: #fff">
+      </div>
+    </div>
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/simple-page">
+        Simple page
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<br><br>

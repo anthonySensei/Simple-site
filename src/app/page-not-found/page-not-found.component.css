@@ -1,0 +1,35 @@
+#formContent {
+  margin-top: 7%;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: rgba(0,0,0,0.82);
+  padding: 30px;
+  width: 40%;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+
+a {
+  color: #EA750D;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  #formContent {
+    width: 80%;
+    min-width: 80%;
+  }
+}
+
+
+
+@media screen and (max-width: 968px) {
+  #formContent {
+    width: 60%;
+  }
+}
