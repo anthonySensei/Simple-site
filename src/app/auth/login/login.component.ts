@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
           queryParamsHandling: 'preserve',
           preserveFragment: true
         };
-
         this.router.navigateByUrl(redirect, navigationExtras);
       }
     });

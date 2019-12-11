@@ -4,21 +4,31 @@
     <hr style="background: white">
      <form>
          <input type="text" id="name" class="fadeIn second"
-                name="name" placeholder="First Name" required>
+                name="name" placeholder="First Name" title="Only letters"
+                pattern="^[a-zA-Z]{2,}$" required>
          <input type="text" id="surname" class="fadeIn second"
-                name="surname" placeholder="Last Name" required>
+                name="surname" placeholder="Last Name" title="Only letters"
+                pattern="^[a-zA-Z]{2,}$" required>
          <input type="text" id="country" class="fadeIn second"
-                name="country" placeholder="Country" required>
+                name="country" placeholder="Country" title="Only letters"
+                pattern="^[a-zA-Z]{2,}$" required>
          <input name="phone" id="phone" class="fadeIn second"
-                placeholder="Phone number" type="text" required>
+                placeholder="Phone number" type="tel" title="Format: 123-456-7890"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
          <input type="email" id="email" class="fadeIn second"
-                name="email" placeholder="Email" required>
+                name="email" placeholder="Email" title="user@some.some"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
          <input type="date" id = "date" class="fadeIn second"
-                name="date" placeholder="Date Of Birth" >
+                name="date" placeholder="Date Of Birth" required>
          <input type="password" id="password" class="fadeIn third"
-                name="password" placeholder="Password" required>
+                name="password" placeholder="Password"
+                title="Min 8 chars. Eg. PaSSword_1"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
+                required>
          <input type="password" id="re-password" class="fadeIn third"
-                name="re-password" placeholder="Confirm password" required>
+                name="re-password" placeholder="Confirm password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
+                required>
          <input type="submit" class="fadeIn fourth" value="Sign up">
      </form>
 

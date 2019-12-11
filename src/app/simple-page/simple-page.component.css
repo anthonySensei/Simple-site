@@ -69,7 +69,8 @@
 
 .card{
   width: 250px;
-  left: 39%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hover-card {
@@ -133,9 +134,6 @@
 
 
 @media screen and (max-width: 600px) {
-  .card{
-    left: 20%;
-  }
   .right-side{
     display: none;
   }
@@ -148,9 +146,6 @@
 }
 
 @media screen and (max-width: 992px) {
-  .card{
-    left: 31%;
-  }
   .right-side{
     display: none;
   }

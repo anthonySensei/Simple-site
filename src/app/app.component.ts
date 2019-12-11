@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
-import { faDoorClosed } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faDoorOpen, faDoorClosed } from '@fortawesome/free-solid-svg-icons';
 
 import { AuthService } from './auth/auth.service';
 
@@ -13,9 +11,9 @@ import { AuthService } from './auth/auth.service';
 })
 export class AppComponent {
   title = 'simple-site';
-  faHome=faHome;
-  faDoorOpen=faDoorOpen;
-  faDoorClosed=faDoorClosed;
+  faHome = faHome;
+  faDoorOpen = faDoorOpen;
+  faDoorClosed = faDoorClosed;
 
   constructor(public authService: AuthService){}
 
